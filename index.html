@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Formulario de Registro</title>
+
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Sitio Web</h1>
+    </header>
+
+    <div class="contact-form">
+        <form action="" method="post" class="formulario" id="formulario" name="formulario">
+            <div class="formulario__grupo formulario__grupo-btn-registro">
+                <p class="titulo-formulario">¡Formulario de Registro!</p>
+                <p class="titulo-formulario2">Completa el formulario</p>
+            </div>
+
+            <!--Grupo nombre-->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre">
+                </div>
+                <p class="formulario__input-error">El nombre puede ser de 3 a 35 caracteres</p>
+            </div>
+
+            <!--Grupo edad-->
+            <div class="formulario__grupo" id="grupo__edad">
+                <label for="edad" class="formulario__label">Edad</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="edad" id="edad">
+                </div>
+                <p class="formulario__input-error">La edad solo debe contener numeros</p>
+            </div>
+
+
+            <!--Grupo genero-->
+            <div class="formulario__radio" id="grupo__genero">
+                <label class="formulario__label">Genero</label>
+                <div class="radio">
+                    <div class="formulario__grupo-input">
+                        <input type="radio" class="formulario__radio" name="genero" id="masculino" value="masculino"><label for="masculino">Hombre</label>
+                        <input type="radio" class="formulario__radio" name="genero" id="femenino" value="femenino"><label for="femenino">Mujer</label>
+                    </div>
+                </div>
+            </div>
+
+            <!--Grupo dirección-->
+            <div class="formulario__grupo" id="grupo__direccion">
+                <label for="direccion" class="formulario__label">Dirección</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="direccion" id="direccion">
+                </div>
+                <p class="formulario__input-error">La dirección puede contener letras y números</p>
+            </div>
+
+
+            <!--Grupo país-->
+            <div class="formulario__grupo" id="grupo__pais">
+                <label for="pais" class="formulario__label">País</label>
+                    <div class="formulario__grupo-input">
+                        <select name="pais" id="pais" class="formulario__input">
+                            <option value="" selected disabled>Selecciona un país ...</option>
+                        </select>
+                    </div>
+            </div>
+
+            <!--Grupo estado-->
+            <div class="formulario__grupo" id="grupo__estado">
+                <label for="estado" class="formulario__label">Estado</label>
+                    <div class="formulario__grupo-input">
+                        <select name="estado" id="estado" class="formulario__input">
+                            <option value="" selected disabled>Selecciona una opcion</option>
+                        </select>
+                    </div>
+            </div>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><b>Error: </b> Verifica que todos los campos esten correctos</p>
+            </div>
+
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="submit" id="envio" class="boton2" disabled><span></span></button>
+
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Se enviaron los datos exitosamente!</p>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/selects.js"></script>
+    <script src="js/validar.js"></script>
+    <script src="js/desactivar.js"></script>
+    
+</body>
+</html>
