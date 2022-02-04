@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+/* ---- ----  Estilos para el encabezado ---- ---- */
+header {
+    background: #364552;
+    color: #fff;
+    padding: 10px 0px;
+    margin-bottom: 15px;
+}
+
+header .titulo {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ---- ----  Estilos para el formulario ---- ---- */
+
+.contact-form {
+    width: 100%;
+    max-width: 850px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .3);
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-form .formulario .formulario__label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+.formulario__input {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #d63036;
+    border-radius: 10px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus {
+    border-bottom: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0 px 30px rgba(163, 163, 163, .4);
+}
+
+.formulario__input-error {
+    font-size: 14px;
+    margin-bottom: 0;
+    display: none;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.formulario__input-error-activo {
+    display: block;
+    text-align: center;
+}
+
+.formulario__mensaje,
+.formulario__grupo-btn-enviar,
+.formulario__grupo-btn-registro {
+    grid-column: span 2;
+}
+
+.formulario__mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+    text-align: center;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__grupo-btn-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__grupo-btn-registro .titulo-formulario {
+    color: #d63036;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.formulario__grupo-btn-registro .titulo-formulario2 {
+    color: #d63036;
+    font-weight: bold;
+    font-size: 24px;
+    
+}
+
+.formulario__mensaje-exito {
+    font-size: 20px;
+    margin-top: 10px;
+    background: #009f4d;
+    color: #000;
+    font-weight: bold;
+    display: none;
+    padding: 10px;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+
+/* ---- ----  Estilos para el boton radio ---- ---- */
+
+.contact-form .formulario input[type="radio"] {
+    display: none;
+}
+
+.contact-form .formulario .radio label { 
+    color: #fe5000;
+    padding: 5px 15px 5px 51px;
+    position: relative;/*Para dar un posición absoluta más adelante al circulo*/
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form .formulario .radio label:hover {
+    background: rgba(237, 132, 12, 0.1);    
+}
+
+.contact-form .formulario .radio label:before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background: none;
+    border: 3px solid #fe5000;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 2px;
+}
+
+.contact-form .formulario input[type="radio"]:checked + label {
+    padding: 5px 15px;
+    background: #fe5000;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.contact-form .formulario input[type="radio"]:checked + label:before {
+    display: none;
+}
+
+.contact-form .formulario .radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* ---- ----  Estilos para el boton enviar ---- ---- */
+.contact-form .formulario .boton2 {
+    width: 100%;
+    height: 40px;
+    background: #4d4f53;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    display: none;
+}
+
+
+/* --- --- --- ESTILOS DEL BOTON SUBMIT --- --- --- */
+
+.contact-form .formulario .boton {
+    width: 100%;
+    height: 40px;
+    background: #fe5000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.contact-form .formulario .boton span {
+    position: relative;
+    z-index: 2;
+}
+
+/*Uso de Pseudo-elemento*/
+.contact-form .formulario .boton::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 40px);
+    border-bottom: 40px solid  rgba(235, 135, 34, .1);
+    font-weight: 500px;
+    border-right: 40px solid transparent;
+    transition: .3s ease-in-out all;
+}
+
+.contact-form .formulario .boton:hover::after {
+    left: 0;
+}
+
+
+/* ---- ----  Estilos para validación ---- ---- */
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border-bottom: 3px solid #bb2929;
+}
+
+/* ---- ----  Mediaqueries ---- ---- */
+@media screen and (max-width: 800px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }    
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar,
+    .formulario__grupo-btn-registro {
+        grid-column: 1;
+    }
+    .formulario__btn {
+        width: 100%;
+    }
+}
+
