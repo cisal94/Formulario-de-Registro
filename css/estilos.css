@@ -113,6 +113,10 @@ header .titulo {
     align-items: center;
 }
 
+.formulario__ocultar-boton {
+    display: none;
+}
+
 .formulario__grupo-btn-registro {
     display: flex;
     flex-direction: column;
